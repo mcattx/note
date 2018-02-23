@@ -1,19 +1,30 @@
+const path = require('path');
+
 const Koa = require('koa');
 const Router = require('koa-router');
+const Views = require('koa-views');
 
 const app = new Koa();
 const router = new Router();
 
+app.use(Views(path.join(__dirname + '/templates'), {
+  map: {
+    njk: 'nunjucks'
+  },
+  extension: 'njk'
+}));
+
 router.get('/', (ctx, next) => {
-    ctx.body = 'Hello World!'
+  return ctx.render('index', {
+    username: 'macat',
+    items: {
+      'te': 'name',
+      'name': 'apple'
+    }
+  })
 });
-
-router.get('/te', (ctx, next) => {
-    ctx.body = 'Hello Te'
-});
-
 app
-    .use(router.routes())
-    .use(router.allowedMethods());
+  .use(router.routes())
+  .use(router.allowedMethods());
 
 app.listen(9527);
