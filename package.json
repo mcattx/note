@@ -1,0 +1,24 @@
+{
+  "name": "note",
+  "version": "1.0.0",
+  "description": "A simple &amp; powerful blog framework powered by Node.js.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/titancat/note.git"
+  },
+  "keywords": [],
+  "author": "mcattx@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/titancat/note/issues"
+  },
+  "homepage": "https://github.com/titancat/note#readme",
+  "dependencies": {
+    "koa": "^2.5.0"
+  }
+}
