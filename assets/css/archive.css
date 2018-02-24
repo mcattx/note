@@ -41,59 +41,43 @@ a {
 }
 
 main {
-  padding-top: 44px;
+  width: 640px;
+  margin: 0 auto;
+  margin-top: 60px;
 }
 
-h1.title {
+.article-title {
   font-size: 40px;
   font-weight: 900;
   padding: 50px 0 30px;
   font-family: serif;
 }
-.article-content {
-  margin: 0 auto;
-  width: 900px;
+
+.article-item {
+  padding: 15px;
+  border: 1px solid #efefef;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
+  background-color: #fff;
+  margin-bottom: 15px;
 }
 
-.article-content p {
-  margin-top: 20px;
+.article-item:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .05);
 }
 
-h4 {
-  font-size: 1.4em;
-  margin-top: 1.2em;
-  margin-bottom: 0.6em;
+.article-item h3 {
+  font-size: 24px;
+  font-weight: 700;
 }
 
-.tag {
-  width: 100%;
-  border-bottom: 1px solid #efefef;
-}
-
-.tag ul {
-  font-size: 15px;
-  letter-spacing: 0;
+.article-item p {
+  margin-top: 5px;
+  color: #666;
   font-weight: 400;
-  margin: 30px 0 10px;
 }
 
-.tag-item {
-  padding: 2px 4px;
-  border-radius: 4px;
-  display: inline-block;
-  color: #888; 
-  background-color: rgba(0, 0, 0, .05);
-}
-
-#comment {
-  position: relative;
-  padding: 20px 0;
-  text-align: center;
-}
-
-footer {
-  clear: both;
-  padding: 60px 0 30px;
-  text-align: center;
-  font-weight: 100;
+.article-item .time {
+  margin-top: 10px;
+  color: #999;
+  text-align: right;
 }

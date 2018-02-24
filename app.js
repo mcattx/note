@@ -20,7 +20,7 @@ app.use(Views(path.join(__dirname + '/templates'), {
 }));
 
 /** define router */
-router.get('/', (ctx, next) => {
+router.get('/', (ctx) => {
   return ctx.render('index', {
     username: 'macat',
     items: {
@@ -29,9 +29,16 @@ router.get('/', (ctx, next) => {
     }
   })
 });
-router.get('/article', (ctx, next) => {
+
+/** article page */
+router.get('/article', (ctx) => {
   return ctx.render('article')
 });
+
+/** archive page */
+router.get('/archive', (ctx) => {
+  return ctx.render('archive')
+})
 
 /** use Router in Koa */
 app
