@@ -38,7 +38,12 @@ router.get('/article', (ctx) => {
 /** archive page */
 router.get('/archive', (ctx) => {
   return ctx.render('archive')
-})
+});
+
+/** about page */
+router.get('/about', (ctx) => {
+  return ctx.render('about')
+});
 
 /** use Router in Koa */
 app
