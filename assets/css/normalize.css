@@ -103,3 +103,14 @@ h1, h2, h3, h4, h5, h6 {
   color: #000;
   line-height: 1.35;
 }
+
+/* 代码片断 */
+pre, code, pre tt {
+  font-family: Courier, 'Courier New', monospace;
+}
+
+pre {
+  display: block;
+  padding: 1em 1.5em;
+  background-color: #f8f8f8;
+}
