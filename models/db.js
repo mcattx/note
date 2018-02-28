@@ -12,16 +12,18 @@ const sequelize = new Sequelize('database', 'username', 'password', {
   timezone: 'Asia/Shanghai'
 })
 
-const User = sequelize.define('user', {
-  username: Sequelize.STRING,
-  birthday: Sequelize.DATE
-});
+module.exports = sequelize;
 
-sequelize.sync()
-  .then(() => User.create({
-    username: 'mcattx',
-    birthday: new Date(1991, 8 ,28)
-  }))
-  .then(jane => {
-    console.log(jane.toJSON());
-  })
+// const User = sequelize.define('user', {
+//   username: Sequelize.STRING,
+//   birthday: Sequelize.DATE
+// });
+
+// sequelize.sync()
+//   .then(() => User.create({
+//     username: 'mcattx',
+//     birthday: new Date(1991, 8 ,28)
+//   }))
+//   .then(jane => {
+//     console.log(jane.toJSON());
+//   })

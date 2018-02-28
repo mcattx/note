@@ -36,3 +36,8 @@
 .nav-item a:hover {
   background-color: #232a2f;
 }
+
+.content {
+  margin-left: 220px;
+  padding: 20px 50px;
+}
