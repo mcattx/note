@@ -7,7 +7,9 @@ const sequelize = new Sequelize('database', 'username', 'password', {
     min: 0,
     acquire: 30000,
     idle: 10000
-  }
+  },
+  // fix mysql timezone problem
+  timezone: 'Asia/Shanghai'
 })
 
 const User = sequelize.define('user', {
