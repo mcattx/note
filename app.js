@@ -50,6 +50,11 @@ router.get('/admin', (ctx) => {
   return ctx.render('admin')
 });
 
+/** login page */
+router.get('/login', (ctx) => {
+  return ctx.render('login')
+})
+
 /** use Router in Koa */
 app
   .use(router.routes())
