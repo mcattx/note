@@ -19,6 +19,22 @@ app.use(Views(path.join(__dirname + '/templates'), {
   extension: 'njk'
 }));
 
+
+app.use(async(ctx, next) => {
+  try {
+    await next()
+    // handle 404
+    if (ctx.status === 404) {
+      console.log(404)
+    } 
+  } catch (err) {
+    // handle 500
+    ctx.status = 500
+    ctx.body = '500'
+  }
+});
+
+
 /** define router */
 router.get('/', (ctx) => {
   return ctx.render('index', {
@@ -55,9 +71,19 @@ router.get('/login', (ctx) => {
   return ctx.render('login')
 })
 
+router.get('/asd', (ctx) => {
+  throw new Error('500')
+})
+
 /** use Router in Koa */
 app
   .use(router.routes())
   .use(router.allowedMethods());
+
+app.use(async(ctx) => {
+  if (parseInt(this.status) === 404) {
+    this.body = '404'
+  }
+});
 
 app.listen(9527);
